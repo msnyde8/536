@@ -1,0 +1,42 @@
+108,30
+
+int GCD (int A, int B)
+{
+	int dividend = B;
+	int divisor = A;
+	if( A > B)
+	{
+		dividend = A;
+		divisor = B;
+	}
+
+	int remainder = dividend % divisor;
+
+	if(remainder == 0)
+	{
+		return divisor;
+	}
+
+	return GCD(remainder, divisor);
+}
+
+
+
+180, 30
+dividend = 180;
+divisor = 30;
+remainder = 18;
+GCD(18, 30);
+dividend = 30;
+divisor = 18;
+remainder = 12;
+GCD(12, 18);
+dividend = 18;
+divisor = 12;
+remainder = 6;
+GCD(6, 12);
+dividend = 12;
+divisor = 6;
+remainder = 0;
+return 6;
+

