@@ -1,0 +1,15 @@
+gcc -c Snyder_HW_01_04.c -Wall 2>&1 | tee -a Snyder_HW_01_04_a.txt; gcc -o Snyder_HW_01_04 Snyder_HW_01_04.o -Wall 2>&1 | tee -a Snyder_HW_01_04_a.txt
+Snyder_HW_01_04.c: In function ‘main’:
+Snyder_HW_01_04.c:8:7: warning: unused variable ‘tChar’ [-Wunused-variable]
+Snyder_HW_01_04.c:6:15: warning: unused variable ‘fNum2’ [-Wunused-variable]
+Snyder_HW_01_04.c:6:8: warning: unused variable ‘fNum1’ [-Wunused-variable]
+Snyder_HW_01_04.c:5:9: warning: unused variable ‘dNum’ [-Wunused-variable]
+
+ls -al Snyder_HW_01_04 Snyder_HW_01_04.o
+-rwxrwxr-x 1 seed seed 7217 Oct  3 10:25 Snyder_HW_01_04
+-rw-rw-r-- 1 seed seed 1064 Oct  3 10:25 Snyder_HW_01_04.o
+
+size Snyder_HW_01_04 Snyder_HW_01_04.o
+   text	   data	    bss	    dec	    hex	filename
+   1284	    260	      8	   1552	    610	Snyder_HW_01_04
+    150	      0	      0	    150	     96	Snyder_HW_01_04.o

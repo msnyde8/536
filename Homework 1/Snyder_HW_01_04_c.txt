@@ -1,0 +1,22 @@
+gcc -c Snyder_HW_01_04.c -g 2>&1 | tee -a Snyder_HW_01_04_c.txt; gcc -o Snyder_HW_01_04 Snyder_HW_01_04.o -g 2>&1 | tee -a Snyder_HW_01_04_c.txt
+
+ls -al Snyder_HW_01_04 Snyder_HW_01_04.o
+-rwxrwxr-x 1 seed seed 8329 Oct  3 10:25 Snyder_HW_01_04
+-rw-rw-r-- 1 seed seed 2624 Oct  3 10:25 Snyder_HW_01_04.o
+
+size Snyder_HW_01_04 Snyder_HW_01_04.o
+   text	   data	    bss	    dec	    hex	filename
+   1284	    260	      8	   1552	    610	Snyder_HW_01_04
+    150	      0	      0	    150	     96	Snyder_HW_01_04.o
+
+
+gcc -c Snyder_HW_01_04.c  2>&1 | tee -a Snyder_HW_01_04_c.txt; gcc -o Snyder_HW_01_04 Snyder_HW_01_04.o  2>&1 | tee -a Snyder_HW_01_04_c.txt
+
+ls -al Snyder_HW_01_04 Snyder_HW_01_04.o
+-rwxrwxr-x 1 seed seed 7217 Oct  3 10:25 Snyder_HW_01_04
+-rw-rw-r-- 1 seed seed 1064 Oct  3 10:25 Snyder_HW_01_04.o
+
+size Snyder_HW_01_04 Snyder_HW_01_04.o
+   text	   data	    bss	    dec	    hex	filename
+   1284	    260	      8	   1552	    610	Snyder_HW_01_04
+    150	      0	      0	    150	     96	Snyder_HW_01_04.o
