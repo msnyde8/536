@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include <stdio.h>
 #include <math.h>
 
@@ -23,13 +24,14 @@ int main()
 
 bool isPrime (int intK)
 {
+	int i;
 	int intSeed = (int)(sqrt(intK));
 
 	if ((intK % 2 ) == 0)
 	{
 		return false;
 	}
-	for(int i = 3; i <= intSeed; i += 2)
+	for(i = 3; i <= intSeed; i += 2)
 	{
 		if((intK % i) == 0)
 		{
