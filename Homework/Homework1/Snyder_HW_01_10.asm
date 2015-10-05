@@ -1,14 +1,17 @@
-extern printf ;
+section .data
+	msg db "hello world ASM", 0xa, 0
+	len equ $-msg
 
-[SECTION .data] ;
-	msg db "Hello, World!", 0xa, 0
+section .text
+	global _start
 
-[SECTION .text]
-	global	main
-main:
-	push	msg
-	call	printf
-	add	esp, byte 4
-return:
-	mov eax, 0
-	ret
+_start:
+	mov eax, 0x04
+	mov ebx, 0x01
+	mov ecx, msg
+	mov edx, len
+	int 0x80
+
+	mov eax, 0x01
+	mov ebx, 0x00
+	int 0x80
