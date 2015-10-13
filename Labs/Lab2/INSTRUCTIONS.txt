@@ -1,0 +1,30 @@
+------------------------------------------------------------------------------------
+*** SEED Lab: http://www.cis.syr.edu/~wedu/seed/Labs_12.04/Software/Format_String/Format_String.pdf ***
+------------------------------------------------------------------------------------
+
+/*------  STEP 1 ------*/
+/* Login as root: */
+   $ su root
+     password: seedubuntu	 
+   $ gcc -g -o vul_prog vul_prog.c
+	 $ chmod 4755 vul_prog
+	 $ exit
+
+/*------  STEP 2: EXPLOITATION ------*/
+	 2.1 Create an empty file, e.g., myInput and enter a number and a string into it
+	 2.2 $ ./vul_prog < myInput
+
+Goals:
+------
+1. Test the ./vul_prog program, supply some string to CRASH the program.
+   - What is the shortest format string?
+   - Why does it crash the program.
+   - Debug the stack to show why the crash happened.
+   - Plot a pictures of the stack based on the debuged program.
+   - Show the locations of all variables on the stack.
+2. Supply an integer and a format string to display SECRET[0] and SECRET[1].
+   - Why did you come up with that integer? What does that integer represent?
+   - That integer is stored on the stack; however our SECRET[1] is on the heap.
+   - How does that display SECRET[1]? And what does the format string do?
+3. Supply an integer and a format string to chang SECRET[1] to a predefined value.
+   - Can your string change SECRET[0] to a predefined value as well? Why or why not?
