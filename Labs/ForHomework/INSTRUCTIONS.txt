@@ -1,0 +1,3 @@
+./myBuildAsm hello
+// Copy data from hexdump_hello.txt to "test.c"
+./myCompileCC test.c
