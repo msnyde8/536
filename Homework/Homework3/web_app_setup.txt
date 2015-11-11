@@ -1,0 +1,18 @@
+sudo vi /etc/php5/apache2/php.ini
+Find the line: "magic_quotes_gpc = On"
+
+Change it to this: "magic_quotes_gpc = Off"
+Restart the Apache server:
+  $ sudo service apache2 restart
+
+
+cp Snyder_HW...php html /var/www/
+
+mysql -u seed
+create database test_db
+use test_db
+CREATE TABLE Users (user_id int(9) NOT NULL auto_increment, user_name VARCHAR(40) NOT NULL, passwd VARCHAR(40) NOT NULL, PRIMARY KEY(user_id));
+INSERT INTO Users (user_name, passwd) VALUES ('Sal','SalPwd');
+INSERT INTO Users (user_name, passwd) VALUES ('Mal','PwdMal');
+
+http://localhost/Snyder_HW_03_05_signin_fixed.php
