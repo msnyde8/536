@@ -1,6 +1,0 @@
-<?php
-	$result = $_POST['enterstr'];
-	$length = strlen($result);
-	echo "String length of '$result' is $length\n";
-?>
-
