@@ -1,0 +1,11 @@
+<html>
+	<form method="POST" action="Snyder_HW_04_02_post.php">
+		Welcome! <br>
+		Name: <br><input type="text" name="name" size="40"><br>
+	</form>
+</html>
+
+<?php
+	$name = $_GET['name'];
+	echo "<a href=\"http://xssattackexamples.com/\">Click for Help</a>";
+?>

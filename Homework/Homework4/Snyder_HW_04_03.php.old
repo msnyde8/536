@@ -1,0 +1,11 @@
+<html>
+	<form method="POST" action="Snyder_HW_04_03.php">
+		Welcome! <br><br>
+		Name: <br><input type="text" name="name" size="40"><br>
+		<input type="submit" value="Submit" />
+	</form>
+</html>
+
+<?php
+	$name = $_POST['name'];
+?>
